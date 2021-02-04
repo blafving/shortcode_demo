@@ -1,0 +1,3 @@
+ENV
+__pycache__
+shortcode_demo/db.sqlite3
