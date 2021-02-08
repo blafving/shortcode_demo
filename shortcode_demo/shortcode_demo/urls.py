@@ -9,7 +9,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
 
-with open("google_sheets_converted.json", "r") as file:
+with open("sample.json", "r") as file:
     meetings_json = file.read()
 
 urlpatterns = [
