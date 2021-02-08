@@ -21,8 +21,11 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/shortcode_demo.css' %}">
 
         {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://react.meetingguide.org/style.css">
         {% endblock %}
+
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -31,10 +34,17 @@
         {% block content %}{% endblock %}
 
         {# Global javascript #}
+        <script>
+            var tsml_react_config = {};
+            </script>
         <script type="text/javascript" src="{% static 'js/shortcode_demo.js' %}"></script>
-
+        <meetings src="/meeting-json" mapbox="pk.eyJ1IjoiYmxhZnZpbmciLCJhIjoiY2trd250dG51MjdqbjJ3cGE1aTFtMzR1ayJ9.St-NyHzVpeTehi3GgeS5tw"/>
+        <script src="https://react.meetingguide.org/app.js" async></script>
         {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
+
+        <p> Does this show up?</p>
         {% endblock %}
+
     </body>
+
 </html>
